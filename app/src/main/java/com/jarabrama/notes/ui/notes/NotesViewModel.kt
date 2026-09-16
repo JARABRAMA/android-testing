@@ -31,11 +31,6 @@ class NotesViewModel @Inject constructor(
                 _state.update { it.copy(searchQuery = event.query) }
                 getNotes()
             }
-            is NotesEvent.DeleteNote -> {
-                viewModelScope.launch {
-                    noteUseCases.deleteNote(event.note)
-                }
-            }
             NotesEvent.Sync -> {
                 syncNotes()
             }
@@ -82,6 +77,5 @@ class NotesViewModel @Inject constructor(
 
 sealed class NotesEvent {
     data class Search(val query: String) : NotesEvent()
-    data class DeleteNote(val note: Note) : NotesEvent()
     object Sync : NotesEvent()
 }
