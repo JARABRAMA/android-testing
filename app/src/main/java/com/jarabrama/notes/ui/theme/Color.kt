@@ -1,4 +1,4 @@
-package com.jarabrama.myapplication.ui.theme
+package com.jarabrama.notes.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
