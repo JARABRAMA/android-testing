@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-  namespace = "com.jarabrama.myapplication"
+  namespace = "com.jarabrama.notes"
   compileSdk {
     version = release(37)
   }
 
   defaultConfig {
-    applicationId = "com.jarabrama.myapplication"
+    applicationId = "com.jarabrama.notes"
     minSdk = 24
     targetSdk = 37
     versionCode = 1
